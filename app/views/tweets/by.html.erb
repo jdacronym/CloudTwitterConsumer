@@ -1,0 +1,4 @@
+<h1>Tweets from <%= @user_name %></h1>
+<% @tweets.each do |tweet| %>
+<p><%= tweet.timestamp %> &mdash; <%= tweet.text %></p>
+<% end %>
