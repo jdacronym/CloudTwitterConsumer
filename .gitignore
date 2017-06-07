@@ -29,3 +29,6 @@ vendor/*
 # emacs things
 *~
 \#*\#
+
+# rspec things
+spec/examples.txt
