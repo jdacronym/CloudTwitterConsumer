@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe TweetsController, type: :controller do
+  before :each do
+    request.env['HTTP_AUTHORIZATION'] =
+      ActionController::HttpAuthentication::Basic
+      .encode_credentials('stackem_packem_rackem','pr@sh@nt')
+  end
+
   describe '#index' do
     let(:response) { get :index }
 
